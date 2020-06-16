@@ -14,7 +14,20 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      }
+      },
+      {
+        test: /\.(svg|png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: 'assets',
+              name: '[name].[ext]',
+              emit: false,
+            }
+          }
+        ]
+      },
     ]
   },
   resolve: {
