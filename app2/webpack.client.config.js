@@ -1,11 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
-
 const path = require("path");
 
 module.exports = (env, {mode}) => {
   const config = {
-    entry: './src/index',
+    entry: './src/client/index',
+    target: "web",
     cache: false,
 
     optimization: {
@@ -19,7 +19,7 @@ module.exports = (env, {mode}) => {
     },
 
     resolve: {
-      extensions: ['.jsx', '.js', '.json'],
+      extensions: ['.jsx', '.js', '.json']
     },
 
     module: {

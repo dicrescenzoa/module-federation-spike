@@ -4,7 +4,7 @@ const path = require("path");
 
 module.exports = (env, {mode}) => {
   const config = {
-    entry: ["@babel/polyfill", './src/client/index'],
+    entry: './src/client/index',
     target: "web",
     cache: false,
 
@@ -17,8 +17,6 @@ module.exports = (env, {mode}) => {
       publicPath: 'http://localhost:3001/',
       chunkFilename: "[name].chunk.js",
     },
-
-    externals: ["enhanced-resolve"],
 
     resolve: {
       extensions: ['.jsx', '.js', '.json']

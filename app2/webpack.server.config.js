@@ -5,16 +5,21 @@ const path = require("path");
 
 module.exports = (env, {mode}) => {
   const config = {
-    entry: {
-      server: './src/indexServer.jsx',
-    },
+    entry: './src/server/index',
 
-    target: 'node',
+    cache: false,
+
+    target: 'async-node',
+
+    optimization: {
+      minimize: false
+    },
 
     output: {
       path: path.resolve("./dist/server"),
       libraryTarget: "commonjs2",
-      publicPath: 'http://localhost:3002/'
+      publicPath: 'http://localhost:3002/',
+      chunkFilename: "[name].chunk.js",
     },
 
     resolve: {

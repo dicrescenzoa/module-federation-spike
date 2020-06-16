@@ -1,20 +1,19 @@
 import React from 'react';
-import { renderToString } from 'react-dom/server';
 import express from "express";
 import path from "path";
 import regeneratorRuntime from "regenerator-runtime";
 
-import ReactApp from './App';
+import { renderToString } from 'react-dom/server';
+
+import ReactApp from '../client/App';
 
 const app = express();
-
-const createApp = (App) => <App />;
 
 app.use(express.static(path.join(__dirname, "../client")));
 
 const renderReactApp = async (req, res) => {
   try {
-    const RENDERED_REACT_APP = await renderToString(createApp(ReactApp));
+    const RENDERED_REACT_APP = await renderToString(<ReactApp />);
 
     const html = `
 <!DOCTYPE html>
