@@ -4,7 +4,8 @@ module.exports = {
   },
   target: 'node',
   output: {
-    libraryTarget: "commonjs2"
+    libraryTarget: "commonjs2",
+    publicPath: 'http://localhost:3001/'
   },
   module: {
     rules: [
