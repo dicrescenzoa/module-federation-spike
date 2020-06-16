@@ -9,6 +9,13 @@ import ReactApp from '../client/App';
 
 const app = express();
 
+app.use(
+  "*",
+  (req, res, next) => {
+    setTimeout(next, 3000);
+  }
+);
+
 app.use(express.static(path.join(__dirname, "../client")));
 
 const renderReactApp = async (req, res) => {
