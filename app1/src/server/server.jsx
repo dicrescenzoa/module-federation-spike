@@ -5,7 +5,7 @@ import regeneratorRuntime from "regenerator-runtime";
 
 import { renderToString } from 'react-dom/server';
 
-import ReactApp from './App';
+import ReactApp from '../client/App';
 
 const app = express();
 

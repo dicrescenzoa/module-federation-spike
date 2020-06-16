@@ -4,7 +4,7 @@ const path = require("path");
 
 module.exports = (env, {mode}) => {
   const config = {
-    entry: ["@babel/polyfill", './src/index'],
+    entry: ["@babel/polyfill", './src/client/index'],
     target: "web",
     cache: false,
 
@@ -43,7 +43,7 @@ module.exports = (env, {mode}) => {
         filename: 'remoteEntry.js',
         remotes: {},
         exposes: {
-          './SharedModule': './src/SharedModule'
+          './SharedModule': './src/client/SharedModule'
         },
         shared: ["react", "react-dom"],
       }),

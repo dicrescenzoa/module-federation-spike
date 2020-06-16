@@ -5,7 +5,7 @@ const path = require("path");
 
 module.exports = (env, {mode}) => {
   const config = {
-    entry: ["@babel/polyfill", './src/indexServer.jsx'],
+    entry: ["@babel/polyfill", './src/server/index'],
 
     cache: false,
 
@@ -46,7 +46,7 @@ module.exports = (env, {mode}) => {
         library: { type: "commonjs2" },
         filename: "container.js",
         exposes: {
-          "./SharedModule": './src/SharedModule'
+          "./SharedModule": './src/client/SharedModule'
         },
         shared: ["react", "react-dom"],
       }),
