@@ -1,11 +1,16 @@
 import React from "react";
-import RickSanchez from './assets/rick-sanchez.png';
+
+import Logo from './assets/logo.png';
+
+import Characters from './Characters';
 
 const App = () => {
   const [counter, setCounter] = React.useState(0);
+
   return (
     <>
-      <img src={RickSanchez} alt=""/>
+      <img src={Logo} alt="" width={500}/>
+      <Characters />
       <div>
         hello here react ({counter})
       </div>

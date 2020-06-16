@@ -7,7 +7,6 @@ import { renderToString } from 'react-dom/server';
 
 import ReactApp from './App';
 
-
 const app = express();
 
 app.use(express.static(path.join(__dirname, "./")));
