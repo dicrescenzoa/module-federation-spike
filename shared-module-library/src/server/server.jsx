@@ -1,6 +1,7 @@
 import React from 'react';
 import express from "express";
 import path from "path";
+
 import regeneratorRuntime from "regenerator-runtime";
 
 import { renderToString } from 'react-dom/server';
@@ -8,13 +9,6 @@ import { renderToString } from 'react-dom/server';
 import ReactApp from '../client/App';
 
 const app = express();
-
-// app.use(
-//   "*",
-//   (req, res, next) => {
-//     setTimeout(next, 3000);
-//   }
-// );
 
 app.use(express.static(path.join(__dirname, "../client")));
 
@@ -45,10 +39,10 @@ const renderReactApp = async (req, res) => {
 
 app.get("/", renderReactApp);
 
-app.listen(3001, (err) => {
+app.listen(3003, (err) => {
   if (err) {
     console.error(err);
     return;
   }
-  console.log(`Listening at http://localhost:3001/`);
+  console.log(`Listening at http://localhost:3003/`);
 });

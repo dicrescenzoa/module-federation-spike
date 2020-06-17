@@ -18,7 +18,7 @@ module.exports = (env, {mode}) => {
     output: {
       path: path.resolve("./dist/server"),
       libraryTarget: "commonjs2",
-      publicPath: 'http://localhost:3002/',
+      publicPath: 'http://localhost:3003/',
       chunkFilename: "[name].chunk.js",
     },
 
@@ -34,24 +34,17 @@ module.exports = (env, {mode}) => {
           options: {
             presets: [require.resolve('@babel/preset-react')]
           }
-        }
+        },
       ]
     },
 
     plugins: [
       new ModuleFederationPlugin({
-        name: 'app2',
+        name: 'sharedModuleLibrary',
         library: { type: "commonjs2" },
         filename: "container.js",
-        remotes: {
-          app1: path.resolve(
-            __dirname,
-            "../app1/dist/server/container.js"
-          ),
-          sharedModuleLibrary: path.resolve(
-            __dirname,
-            "../shared-module-library/dist/server/container.js"
-          ),
+        exposes: {
+          './Modules': './src/client/components/index'
         },
         shared: ["react", "react-dom"],
       }),

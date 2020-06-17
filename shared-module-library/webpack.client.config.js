@@ -14,7 +14,7 @@ module.exports = (env, {mode}) => {
 
     output: {
       path: path.resolve("./dist/client"),
-      publicPath: 'http://localhost:3002/',
+      publicPath: 'http://localhost:3003/',
       chunkFilename: "[name].chunk.js",
     },
 
@@ -30,18 +30,18 @@ module.exports = (env, {mode}) => {
           options: {
             presets: [require.resolve('@babel/preset-react')]
           }
-        }
+        },
       ]
     },
 
     plugins: [
       new ModuleFederationPlugin({
-        name: 'app2',
-        library: {type: 'var', name: 'app2'},
+        name: 'sharedModuleLibrary',
+        library: {type: 'var', name: 'sharedModuleLibrary'},
         filename: 'remoteEntry.js',
-        remotes: {
-          app1: 'app1',
-          sharedModuleLibrary: 'sharedModuleLibrary',
+        remotes: {},
+        exposes: {
+          './Modules': './src/client/components/index'
         },
         shared: ["react", "react-dom"],
       }),
