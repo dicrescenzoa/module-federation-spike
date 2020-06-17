@@ -1,9 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  border: 4px solid green;
+  padding: 12px
+`;
 
 const SharedModule = () => {
   const [counter, setCounter] = React.useState(0);
   return (
-    <div>
+    <Wrapper>
       <h1>this is the SharedModule 1</h1>
       <div>
         <p>{counter}</p>
@@ -12,7 +18,7 @@ const SharedModule = () => {
         }}>+
         </button>
       </div>
-    </div>
+    </Wrapper>
   )
 };
 
