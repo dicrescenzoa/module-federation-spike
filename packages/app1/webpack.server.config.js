@@ -43,7 +43,12 @@ module.exports = (env, {mode}) => {
         name: 'app1',
         library: { type: "commonjs2" },
         filename: "container.js",
-        exposes: {},
+        remotes: {
+          sharedModuleLibrary: path.resolve(
+            __dirname,
+            "../shared-module-library/dist/server/container.js"
+          ),
+        },
         shared: ["react", "react-dom"],
       }),
     ]

@@ -9,7 +9,7 @@ import {
 const App = () => {
   return (
     <div>
-      hello here App 1
+      hello! here shared-module-library
       <SharedModule1/>
       <SharedModule2/>
       <SharedModule3/>
