@@ -52,7 +52,7 @@ module.exports = (env, {mode}) => {
         library: { type: "commonjs2" },
         filename: "container.js",
         exposes: {
-          './SharedModule1':  './src/client/components/SharedModule/SharedModule'
+          './SharedModules': './src/client/components',
         },
         shared: ["react", "react-dom"],
       }),

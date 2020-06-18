@@ -21,7 +21,7 @@ const renderReactApp = async (req, res) => {
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>app-1-react</title>
+    <title>shared-module-library</title>
 </head>
 <body>
 <div id="root">${RENDERED_REACT_APP}</div>

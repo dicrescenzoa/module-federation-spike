@@ -58,7 +58,7 @@ module.exports = (env, {mode}) => {
         filename: 'remoteEntry.js',
         remotes: {},
         exposes: {
-          './SharedModule1': './src/client/components/SharedModule/SharedModule'
+          './SharedModules': './src/client/components',
         },
         shared: ["react", "react-dom"],
       }),
