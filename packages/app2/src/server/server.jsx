@@ -21,8 +21,8 @@ const renderReactApp = async (req, res) => {
 <head>
     <meta charset="utf-8">
     <title>app-2-react</title>
-    <script src="http://localhost:3001/remoteEntry.js" charset="utf-8" ></script>
     <script src="http://localhost:3003/remoteEntry.js" charset="utf-8" ></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3003/381.css">
 </head>
 <body>
 <div id="root">${RENDERED_REACT_APP}</div>

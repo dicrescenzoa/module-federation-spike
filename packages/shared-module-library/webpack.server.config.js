@@ -51,7 +51,7 @@ module.exports = (env, {mode}) => {
         library: { type: "commonjs2" },
         filename: "container.js",
         exposes: {
-          './Modules': './src/client/components/index'
+          './SharedModule1':  './src/client/components/SharedModule/SharedModule'
         },
         shared: ["react", "react-dom"],
       }),

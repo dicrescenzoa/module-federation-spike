@@ -43,9 +43,7 @@ module.exports = (env, {mode}) => {
         name: 'app1',
         library: { type: "commonjs2" },
         filename: "container.js",
-        exposes: {
-          "./SharedModule": './src/client/SharedModule'
-        },
+        exposes: {},
         shared: ["react", "react-dom"],
       }),
     ]

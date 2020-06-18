@@ -44,10 +44,6 @@ module.exports = (env, {mode}) => {
         library: { type: "commonjs2" },
         filename: "container.js",
         remotes: {
-          app1: path.resolve(
-            __dirname,
-            "../app1/dist/server/container.js"
-          ),
           sharedModuleLibrary: path.resolve(
             __dirname,
             "../shared-module-library/dist/server/container.js"

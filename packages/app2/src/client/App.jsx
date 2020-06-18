@@ -1,14 +1,11 @@
 import React from 'react';
 
-import SharedModule from 'app1/SharedModule';
-
-import { SharedModule1 } from 'sharedModuleLibrary/Modules';
+import SharedModule1 from 'sharedModuleLibrary/SharedModule1';
 
 const App = () => {
   return (
     <div>
       hello here App 2
-      <SharedModule />
       <SharedModule1 />
     </div>
   )

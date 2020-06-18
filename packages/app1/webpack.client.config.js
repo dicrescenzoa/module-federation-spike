@@ -40,9 +40,7 @@ module.exports = (env, {mode}) => {
         library: {type: 'var', name: 'app1'},
         filename: 'remoteEntry.js',
         remotes: {},
-        exposes: {
-          './SharedModule': './src/client/SharedModule'
-        },
+        exposes: {},
         shared: ["react", "react-dom"],
       }),
     ]
