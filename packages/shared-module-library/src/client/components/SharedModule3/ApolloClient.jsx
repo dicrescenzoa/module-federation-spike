@@ -13,7 +13,7 @@ const httpLink = new HttpLink({
 
 const ssrMode = isServer;
 
-const cache = isServer ? new InMemoryCache() : new InMemoryCache().restore(window.__FCA_SHARED_MODULE_2_STATE__);
+const cache = isServer ? new InMemoryCache() : new InMemoryCache().restore(window.__FCA_SHARED_MODULE_3_STATE__);
 
 const client = new ApolloClient({
   link: ApolloLink.from([httpLink]),

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SharedModule1, SharedModule2 } from 'sharedModuleLibrary/SharedModules';
+import { SharedModule1, SharedModule2, SharedModule3 } from 'sharedModuleLibrary/SharedModules';
 
 const App = () => {
   return (
@@ -8,6 +8,7 @@ const App = () => {
       hello here App 2
       <SharedModule1 />
       <SharedModule2 />
+      <SharedModule3 />
     </div>
   )
 };

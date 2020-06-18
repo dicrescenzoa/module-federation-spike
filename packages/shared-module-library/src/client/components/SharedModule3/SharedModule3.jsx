@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery, ApolloProvider } from '@apollo/react-hooks';
-import {getDataFromTree, renderToStringWithData} from "@apollo/react-ssr";
+import { getDataFromTree } from "@apollo/react-ssr";
 import { gql } from "apollo-boost";
 
 import ApolloClient from './ApolloClient';
@@ -9,7 +9,7 @@ import './style.scss';
 
 const QUERY = gql`
     {
-        characters(page: 1) {
+        locations(page: 1) {
             results {
                 name
             }
@@ -17,7 +17,7 @@ const QUERY = gql`
     }
 `;
 
-const SharedModule2 = () => {
+const SharedModule3 = () => {
   const { loading, error, data } = useQuery(QUERY);
 
   if (loading) return <p>Loading...</p>;
@@ -30,20 +30,20 @@ const SharedModule2 = () => {
   )
 };
 
-const SharedModule2WithApollo = () => {
+const SharedModule3WithApollo = () => {
   return (
     <ApolloProvider client={ApolloClient}>
-      <SharedModule2 />
+      <SharedModule3 />
     </ApolloProvider>
   );
 };
 
 export const ApolloClientInstance = ApolloClient;
 
-export const get__FCA_SHARED_MODULE_2_STATE__ = async (ReactApp) => {
+export const get__FCA_SHARED_MODULE_3_STATE__ = async (ReactApp) => {
   await ApolloClientInstance.resetStore();
   await getDataFromTree(ReactApp)
   return ApolloClientInstance.extract();
 };
 
-export default SharedModule2WithApollo;
+export default SharedModule3WithApollo;
