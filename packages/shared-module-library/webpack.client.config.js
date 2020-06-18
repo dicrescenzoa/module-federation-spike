@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = (env, {mode}) => {
@@ -31,10 +32,25 @@ module.exports = (env, {mode}) => {
             presets: [require.resolve('@babel/preset-react')]
           }
         },
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: "/",
+                hmr: true
+              }
+            },
+            "css-loader",
+            "sass-loader"
+          ]
+        }
       ]
     },
 
     plugins: [
+      new MiniCssExtractPlugin(),
       new ModuleFederationPlugin({
         name: 'sharedModuleLibrary',
         library: {type: 'var', name: 'sharedModuleLibrary'},

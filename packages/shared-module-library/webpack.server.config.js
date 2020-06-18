@@ -35,6 +35,13 @@ module.exports = (env, {mode}) => {
             presets: [require.resolve('@babel/preset-react')]
           }
         },
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            "css-loader",
+            "sass-loader"
+          ]
+        }
       ]
     },
 

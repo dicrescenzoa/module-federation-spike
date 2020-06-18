@@ -3,7 +3,6 @@ import React from 'react';
 import {
   SharedModule1,
   SharedModule2,
-  SharedModule3
 } from './components';
 
 const App = () => {
@@ -12,7 +11,6 @@ const App = () => {
       hello here App 1
       <SharedModule1/>
       <SharedModule2/>
-      <SharedModule3/>
     </div>
   )
 };
