@@ -16,6 +16,7 @@
   ],
   "scripts": {
     "build": "yarn workspaces run build",
-    "start": "concurrently \"wsrun --parallel start\""
+    "start": "concurrently \"wsrun --parallel start\"",
+    "dev": "concurrently \"wsrun --parallel dev\""
   }
 }

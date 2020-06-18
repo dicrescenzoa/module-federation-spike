@@ -39,6 +39,7 @@ module.exports = (env, {mode}) => {
           test: /\.(sa|sc|c)ss$/,
           use: [
             "css-loader",
+            "postcss-loader",
             "sass-loader"
           ]
         }
