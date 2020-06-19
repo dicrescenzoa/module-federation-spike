@@ -61,6 +61,9 @@ module.exports = (env, {mode}) => {
           './SharedModules': './src/client/components',
         },
         shared: ["react", "react-dom"],
+        // remotes will depend on host dependencies,
+        // if the host does not have a dependency, the
+        // remote will download its own.
       }),
     ]
   };

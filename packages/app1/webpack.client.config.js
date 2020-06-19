@@ -44,6 +44,9 @@ module.exports = (env, {mode}) => {
         },
         exposes: {},
         shared: ["react", "react-dom"],
+        // remotes will depend on host dependencies,
+        // if the host does not have a dependency, the
+        // remote will download its own.
       }),
     ]
   };
