@@ -4,6 +4,9 @@ var hbs_temp = hbs.create();
 require('isomorphic-fetch');
 const app = express();
 
+// regexp for avoid hbs
+// /<fragment(?=\s)(?!(?:[^>"\']|"[^"]*"|\'[^\']*\')*?(?<=\s)(?:term|range)\s*=)(?!\s*?>)\s+(?:".*?"|\'.*?\'|[^>]*?)+> /gs
+
 app.engine('hbs', hbs.express3({}));
 
 app.set("view engine", ".hbs");
