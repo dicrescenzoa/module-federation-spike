@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Example APP</title>
+</head>
+
+<body>
+<ul class="shipping__method">
+    <li>Shipping: Before increase <span>$ {{ totalPrice }}</span></li>
+</ul>
+<ul class="total__amount">
+    <li>Order Total: After increase <span>$ {{increasePrice totalPrice}}</span></li>
+
+    {{includeFragment 'http://localhost:3001'}}
+</ul>
+</body>
+
+</html>

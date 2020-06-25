@@ -23,18 +23,9 @@ const renderReactApp = async (req, res) => {
     const RENDERED_REACT_APP = await renderToString(<ReactApp />);
 
     const html = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>app-1-react</title>
-    <script src="http://localhost:3003/remoteEntry.js" charset="utf-8" ></script>
-</head>
-<body>
+<script src="http://localhost:3003/remoteEntry.js" charset="utf-8" ></script>
 <div id="root">${RENDERED_REACT_APP}</div>
-<script src="/main.js" charset="utf-8" ></script>
-</body>
-</html>
+<script src="http://localhost:3001/main.js" charset="utf-8" ></script>
     `;
 
     res.send(html);

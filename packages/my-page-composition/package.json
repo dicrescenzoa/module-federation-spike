@@ -1,0 +1,14 @@
+{
+  "name": "my-page-composition",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "async-helpers": "^0.3.17",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-hbs": "^2.3.3",
+    "handlebars-async": "^1.0.0",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
