@@ -14,7 +14,7 @@
     "apollo-link": "^1.2.14",
     "apollo-link-http": "^1.5.17",
     "autoprefixer": "^9.8.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "axios-hooks": "^1.10.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.6.0",
